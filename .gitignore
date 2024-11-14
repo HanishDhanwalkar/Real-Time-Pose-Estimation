@@ -1,0 +1,6 @@
+# Cache
+*/*.pyc
+# yolo weights
+*.pt
+#sample vids
+sample_vids/*.mp4
