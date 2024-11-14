@@ -1,8 +1,11 @@
 # Real-Time-Pose-Estimation
 
 ## Instructions
+
+### installation
 `git clone https://github.com/HanishDhanwalkar/Real-Time-Pose-Estimation.git` \
-`cd Real-Time-Pose-Estimation`
+`cd Real-Time-Pose-Estimation` \
+`pip install -r requirements.txt`
 
 Download YOLO weights from [link](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-pose.pt)
 
