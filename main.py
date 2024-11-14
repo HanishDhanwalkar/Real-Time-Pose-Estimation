@@ -8,7 +8,8 @@ import time
 if __name__ == '__main__':
     yolo = YoloDectector(model_path="yolo11n-pose.pt") 
 
-    video_path = r"./sample_vids/sample1.mp4" 
+    # PUT empty path for camera feed
+    video_path = r"./sample_vids/sample1.mp4" # For pose estimation of a video. 
         
     if os.path.exists(video_path):
         print('FOUND video file')
