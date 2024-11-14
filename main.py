@@ -4,16 +4,26 @@ import torch
 import os
 import time
 
+import argparse
+
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    
+    parser.add_argument('--video_path', type=str, help='Add Video path')
+    
+    args = parser.parse_args()
+    
     yolo = YoloDectector(model_path="yolo11n-pose.pt") 
 
     # PUT empty path for camera feed
-    video_path = r"./sample_vids/sample1.mp4" # For pose estimation of a video. 
-        
-    if os.path.exists(video_path):
-        print('FOUND video file')
-        cap = cv2.VideoCapture(video_path) 
+    # video_path = r"./sample_vids/sample1.mp4" # For pose estimation of a video. 
+    video_path = args.video_path  # For pose estimation of a video. 
+    
+    if video_path != None:
+        if os.path.exists(video_path):
+            print('FOUND video file')
+            cap = cv2.VideoCapture(video_path) 
     else:
         print('NOT FOUND video file: ', video_path)
         cap = cv2.VideoCapture(0)  
