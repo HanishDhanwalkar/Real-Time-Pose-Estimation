@@ -13,10 +13,17 @@ if __name__ == '__main__':
     cap = cv2.VideoCapture(0)
 
     while run:
+        # #########
+        ret, frame = cap.read()
         
-        _, frame = cap.read()
-        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        FRAME_WINDOW.image(frame)
+        
+        if not ret:
+            st.write("ERROR: Could not read frame")
+            break
+        else:
+            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            FRAME_WINDOW.image(frame)
+        # ###########
         
         # ret, frame = cap.read()
         
